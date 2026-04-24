@@ -1,0 +1,104 @@
+name: Bug report (detailed)
+description: Full bug report with repro steps, plan export, and console output. Use this if you can spare a few minutes.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a report. The more specific
+        you can be, the faster it gets fixed.
+
+        Before you file: please search existing issues first in case
+        someone has already hit the same thing.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: A short description of the bug. One or two sentences is enough.
+      placeholder: "When I drag a half-depth switch onto an empty rack, the ghost preview jumps to the wrong slot."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: What should the planner have done instead?
+      placeholder: "The preview should snap to the hovered slot."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: |
+        Step-by-step what you did. If the bug only shows up with a
+        specific plan, exporting the plan as JSON (there's a button in
+        the app) and pasting it below makes the bug reproducible.
+      placeholder: |
+        1. Open a fresh plan.
+        2. Add a 6U mini-rack.
+        3. Drag the "Generic 1U switch" from the catalog onto slot 3.
+        4. The ghost preview shows slot 1.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      description: What kind of device were you using?
+      options:
+        - Desktop / laptop
+        - Tablet
+        - Phone
+        - Other (describe in the extra-info field)
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      description: e.g. "Firefox 128", "Chrome 126", "Safari 17.4 on iOS"
+      placeholder: "Firefox 128 on Linux"
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Browser console output (optional)
+      description: |
+        Open dev tools (F12 on desktop) and paste any red errors from
+        the Console tab. Often there's nothing; that's fine too.
+      render: shell
+
+  - type: textarea
+    id: plan_json
+    attributes:
+      label: Plan export (optional)
+      description: |
+        If the bug is tied to a specific plan, export it as JSON from
+        the app and paste it here. Drop the outer object into a code
+        block so GitHub doesn't mangle it.
+      render: json
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, screen recordings, weird context. Drag-and-drop images directly into the box.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before filing
+      options:
+        - label: I searched existing issues and this doesn't look like a duplicate.
+          required: true
+        - label: I tried reloading the page and the bug still happens (or it happens every time I come back to it).
+          required: false

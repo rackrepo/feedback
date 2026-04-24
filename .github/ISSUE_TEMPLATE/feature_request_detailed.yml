@@ -1,0 +1,77 @@
+name: Feature request (detailed)
+description: Full feature request with the homelab situation, workaround, and scope. Use this if you can spare a few minutes.
+title: "[feature] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. The most useful feature requests
+        start from a concrete homelab problem, not a generic "it
+        should have X" wish.
+
+        Before you file: please search existing issues in case
+        someone has already suggested it, and add a reaction or a
+        comment there instead.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What are you trying to do?
+      description: |
+        Describe the real situation you're planning for. What's the
+        rack, what's the gear, what's the constraint you're working
+        around?
+      placeholder: |
+        I'm planning a 12U mini-rack with a half-depth switch at the
+        top and a Pi 5 cluster underneath. I want to mark which Pi is
+        the control plane so I don't lose track.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What would you like the planner to do?
+      description: |
+        The feature itself, as concretely as you can put it. Rough
+        sketches, screenshots of other tools, or "like X but for Y"
+        analogies are all fine.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: What are you doing instead today?
+      description: |
+        If you've found a workaround (labels, notes, a spreadsheet on
+        the side), what does it look like? This helps gauge how
+        painful the gap is.
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: How common do you think this is?
+      description: Best guess. No wrong answer.
+      options:
+        - Probably just me / my setup
+        - A few homelabbers would want this
+        - Most homelabbers planning a mini-rack would want this
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Links to relevant Reddit threads, forum posts, videos, or other tools that handle this well. Screenshots welcome.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before filing
+      options:
+        - label: I searched existing issues and this isn't already requested.
+          required: true

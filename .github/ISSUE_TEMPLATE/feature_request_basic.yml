@@ -1,0 +1,28 @@
+name: Feature request (quick)
+description: Short feature request. Use this if you just want to drop the idea without writing up the full context.
+title: "[feature] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A quick suggestion is welcome. If you can spare a few more minutes, the detailed template (with the homelab situation you're planning for) is much easier to act on.
+
+        Before creating: please search existing issues in case someone has already suggested it, and add a reaction or a comment there instead.
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What would you like the planner to do?
+      description: The feature itself, as concretely as you can put it. A sentence or two is fine.
+      placeholder: "Let me mark one Pi in a cluster as the control plane so I don't lose track of which is which."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before filing
+      options:
+        - label: I searched existing issues and this isn't already requested.
+          required: true

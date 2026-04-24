@@ -1,0 +1,35 @@
+name: Bug report (quick)
+description: Short bug report. Use this if you just want to flag something without writing a full repro.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A quick report is welcome. If you can spare a few more minutes, the detailed template gives us more to go on.
+
+        Before creating: please search existing issues first in case someone has already hit the same thing.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect instead? A sentence or two is fine.
+      placeholder: "Dragging a half-depth switch onto an empty rack snaps the preview to the wrong slot — I expected it to snap to the hovered slot."
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser / device (optional)
+      description: e.g. "Firefox 128 on Linux", "Safari on iPhone".
+      placeholder: "Firefox 128 on Linux"
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before filing
+      options:
+        - label: I searched existing issues and this doesn't look like a duplicate.
+          required: true

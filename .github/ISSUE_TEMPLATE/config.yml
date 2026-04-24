@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Try the planner
+    url: https://app.rackrepo.com
+    about: The RackRepo app itself. Open this if you haven't tried it yet.
+  - name: RackRepo blog
+    url: https://news.rackrepo.com
+    about: Release notes, writeups, and background on what's being worked on.
+  - name: Monthly newsletter
+    url: https://rackrepo.kit.com
+    about: One email a month with what shipped and what's next.
+  - name: Longer-form or private feedback
+    url: https://benirl.com#contacts
+    about: For anything that doesn't fit a public issue.
